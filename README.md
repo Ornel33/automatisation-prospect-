@@ -2,12 +2,12 @@
 
 Prospect Flow est une plateforme SaaS de prospection intelligente conçue pour une agence E-commerce spécialisée dans la mode, le fooding, la beauté, la santé, l'énergie et les projets innovants. L'outil permet de centraliser la recherche de leads, l'automatisation de l'enrichissement des données et la prise de contact ciblée.
 
-## 🔗 Liens Utiles
+## Liens Utiles
 - **Démo en direct :** [https://automatisation-prospects.vercel.app](https://automatisation-prospects.vercel.app)
 - **Maquette UI / Design :** [Stitch Mockup](https://stitch.withgoogle.com/projects/16139420339979512322)
 
 
-## 🌟 Fonctionnalités Principales
+## Fonctionnalités Principales
 
 *   **Tableau de Bord (Dashboard) :** Vue d'ensemble des performances de prospection, avec statistiques sur les leads ajoutés et filtres de temps (7 jours, 30 jours, personnalisés).
 *   **Recherche de Prospects Automatisée :** 
@@ -23,7 +23,7 @@ Prospect Flow est une plateforme SaaS de prospection intelligente conçue pour u
     *   Interface utilisateur premium et réactive (Tailwind CSS) avec un mode "Mobile-First" (barre de navigation inférieure sur mobile, grilles fluides).
     *   Animations subtiles et feedbacks utilisateur (Toast notifications).
 
-## 🛠️ Stack Technique
+## Stack Technique
 
 *   **Frontend :** React.js (Vite), React Router DOM
 *   **Styling :** Tailwind CSS
@@ -31,7 +31,7 @@ Prospect Flow est une plateforme SaaS de prospection intelligente conçue pour u
 *   **Automatisation & IA :** n8n (Workflows, Webhooks, RAG, OpenAI, Claude)
 *   **Déploiement :** Vercel
 
-## 🚀 Installation & Lancement en local
+## Installation & Lancement en local
 
 1.  **Cloner le dépôt :**
     ```bash
@@ -57,13 +57,13 @@ Prospect Flow est une plateforme SaaS de prospection intelligente conçue pour u
     ```
     L'application sera accessible sur `http://localhost:5173`.
 
-## ⚙️ Configuration n8n
+## Configuration n8n
 
 Pour que la recherche de prospects fonctionne :
 1.  Assurez-vous que votre instance n8n est en ligne et que votre workflow "Recherche Prospects" est en mode **Published** (Actif).
 2.  L'URL du Webhook de production n8n est configurée dans `src/pages/ProspectSearch.jsx`.
 
-## 📦 Déploiement
+## Déploiement
 
 Le projet est pré-configuré pour un déploiement fluide sur Vercel :
 ```bash
