@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f1effa",
+                        "on-surface-variant": "#4c4546",
+                        "surface-dim": "#dad9e3",
+                        "on-secondary-fixed": "#221b00",
+                        "surface-container-low": "#f4f2fd",
+                        "on-background": "#1a1b22",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#000000",
+                        "surface-container-high": "#e8e7f1",
+                        "on-error": "#ffffff",
+                        "surface": "#fbf8ff",
+                        "surface-tint": "#5e5e5e",
+                        "secondary-fixed-dim": "#e9c400",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "secondary-fixed": "#ffe16d",
+                        "surface-container": "#eeedf7",
+                        "outline": "#7e7576",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#6e5c00",
+                        "surface-container-highest": "#e3e1ec",
+                        "tertiary-container": "#1a1c1d",
+                        "outline-variant": "#cfc4c5",
+                        "surface-bright": "#fbf8ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fbf8ff",
+                        "primary-fixed": "#e2e2e2",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#1b1b1b",
+                        "on-primary-container": "#848484",
+                        "secondary": "#705d00",
+                        "on-tertiary-container": "#838485",
+                        "tertiary-fixed": "#e2e2e3",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#544600",
+                        "on-surface": "#1a1b22",
+                        "surface-variant": "#e3e1ec",
+                        "secondary-container": "#fcd400",
+                        "inverse-surface": "#2f3038",
+                        "on-primary-fixed": "#1b1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "grid-pattern": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grid-bg {
+            background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-zinc-100 bg-white flex flex-col p-4 gap-2 z-50">
+<div class="mb-lg">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="">rocket_launch</span>
+</div>
+<div>
+<h1 class="text-xl font-black text-zinc-900 tracking-tight" style="">Command Center</h1>
+<p class="font-['Inter'] text-sm font-semibold tracking-tight text-zinc-500" style="">Agency Suite v1.0</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-zinc-500 hover:text-zinc-900 font-['Inter'] text-sm font-semibold tracking-tight transition-all duration-200 ease-in-out" href="#" style="">
+<span class="material-symbols-outlined" data-icon="dashboard" style="">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#FFD700] text-black rounded-md shadow-sm font-['Inter'] text-sm font-semibold tracking-tight transition-all duration-200 ease-in-out" href="#" style="">
+<span class="material-symbols-outlined" data-icon="search" style="">search</span>
+                    Prospecting
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-zinc-500 hover:text-zinc-900 font-['Inter'] text-sm font-semibold tracking-tight transition-all duration-200 ease-in-out" href="#" style=""><span class="material-symbols-outlined" data-icon="group" style="">group</span> Prospects</a>
+</nav>
+</div>
+<div class="mt-auto space-y-1 border-t border-zinc-100 pt-4">
+<a class="flex items-center gap-3 px-4 py-3 text-zinc-500 hover:text-zinc-900 font-['Inter'] text-sm font-semibold tracking-tight transition-all duration-200 ease-in-out" href="#" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-zinc-500 hover:text-zinc-900 font-['Inter'] text-sm font-semibold tracking-tight transition-all duration-200 ease-in-out" href="#" style="">
+<span class="material-symbols-outlined" data-icon="contact_support" style="">contact_support</span>
+                Support
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen grid-bg">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between w-full h-16 px-6 sticky top-0 bg-white/80 backdrop-blur-md z-40 border-b border-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" style="">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-zinc-50 border-none rounded-full text-sm focus:ring-2 focus:ring-primary w-64 transition-all" placeholder="Search data..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<button class="p-2 text-zinc-500 hover:bg-zinc-50 rounded-full transition-colors" style="">
+<span class="material-symbols-outlined" data-icon="notifications" style="">notifications</span>
+</button>
+<button class="p-2 text-zinc-500 hover:bg-zinc-50 rounded-full transition-colors" style="">
+<span class="material-symbols-outlined" data-icon="help_outline" style="">help_outline</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-zinc-200 mx-2"></div>
+<div class="flex items-center gap-3 cursor-pointer">
+<img alt="Agency Administrator" class="w-8 h-8 rounded-full border border-zinc-200" data-alt="Professional portrait of a male executive in a clean minimalist office environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDarWCB3xhZloUkmjBvuZWAOSvTNXO7iBFENqGDtlignLme7YaujrZcqPT04VOwLE7Su_q7nG_rSryvNZUosHR5t3il7mboN8kFMlx8CIcJ2S35AStM75CZgmuisq0ERFxWiNyKDy081_lvGtx20QsWEABVGwGzcjP5w7S6xaR7l98tXCVfUWTiM4cymNxsAtXaypnWNTnaF6IhaQyL5OuRVDX_oeuW0A7t7Y2DV2R9yxyBH7z9emvFSMc-5CZDfq4kiBfD7MFHWUAh" style=""/>
+<span class="text-zinc-900 font-['Inter'] text-sm font-medium" style="">Admin</span>
+</div>
+</div>
+</header>
+<!-- Prospecting Content -->
+<section class="max-w-4xl mx-auto py-xl px-md">
+<div class="mb-lg text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs" style="">Trouver vos prochains prospects</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto" style="">Configurez vos critères pour trouver vos leads.</p>
+</div>
+<div class="bg-white rounded-xl border border-[#F0F0F0] shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden max-w-2xl mx-auto">
+<div class="p-md border-b border-[#F0F0F0] bg-zinc-50/30">
+<h3 class="font-headline-md text-headline-md flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-primary" style="">filter_list</span>
+                        Paramètres de ciblage
+                    </h3>
+</div>
+<form class="p-md space-y-md">
+<div class="grid grid-cols-2 gap-md">
+<!-- Secteur -->
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" style="">Secteur d'activité</label>
+<select class="w-full bg-white border-x-0 border-t-0 border-b-1 border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-body-md appearance-none">
+<option>Choisir un secteur</option>
+<option>Mode</option>
+<option>Fooding</option>
+<option>Beauté</option>
+<option>Santé</option>
+<option>Énergie</option>
+<option>Projets innovants</option>
+</select>
+</div>
+<!-- Positionnement -->
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" style="">Positionnement</label>
+<select class="w-full bg-white border-x-0 border-t-0 border-b-1 border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-body-md appearance-none">
+<option>Type d'entreprise</option>
+<option>Grand groupe</option>
+<option>Retailers</option>
+<option>DNVB</option>
+<option>Autres</option>
+</select>
+</div>
+<!-- Taille -->
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" style="">Taille de l'entreprise</label>
+<select class="w-full bg-white border-x-0 border-t-0 border-b-1 border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-body-md appearance-none">
+<option>Nombre d'employés</option>
+<option>1-10</option>
+<option>11-50</option>
+<option>51-200</option>
+<option>201-500</option>
+<option>500+</option>
+</select>
+</div>
+<!-- Revenu -->
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" style="">Revenu annuel</label>
+<select class="w-full bg-white border-x-0 border-t-0 border-b-1 border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-body-md appearance-none">
+<option>Chiffre d'affaires</option>
+<option>100K+</option>
+<option>500K+</option>
+<option>1M+</option>
+<option>5M+</option>
+</select>
+</div>
+</div>
+<!-- Localisation -->
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" style="">Localisation</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute right-0 bottom-2 text-zinc-400" style="">location_on</span>
+<input class="w-full bg-white border-x-0 border-t-0 border-b-1 border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-body-md" placeholder="ex: Paris, France, Europe" type="text"/>
+</div>
+</div>
+<!-- Primary Action -->
+<div class="pt-base">
+<button class="w-full py-4 bg-[#FFD700] text-black font-headline-md text-headline-md rounded hover:bg-[#e6c200] transition-all transform active:scale-98 shadow-sm flex items-center justify-center gap-3" style="" type="submit">
+<span class="material-symbols-outlined" style="">bolt</span>
+                            Rechercher les prospects
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f1effa",
+                    "on-surface-variant": "#4c4546",
+                    "surface-dim": "#dad9e3",
+                    "on-secondary-fixed": "#221b00",
+                    "surface-container-low": "#f4f2fd",
+                    "on-background": "#1a1b22",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#000000",
+                    "surface-container-high": "#e8e7f1",
+                    "on-error": "#ffffff",
+                    "surface": "#fbf8ff",
+                    "surface-tint": "#5e5e5e",
+                    "secondary-fixed-dim": "#e9c400",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1a1c1d",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "secondary-fixed": "#ffe16d",
+                    "surface-container": "#eeedf7",
+                    "outline": "#7e7576",
+                    "inverse-primary": "#c6c6c6",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#6e5c00",
+                    "surface-container-highest": "#e3e1ec",
+                    "tertiary-container": "#1a1c1d",
+                    "outline-variant": "#cfc4c5",
+                    "surface-bright": "#fbf8ff",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fbf8ff",
+                    "primary-fixed": "#e2e2e2",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#1b1b1b",
+                    "on-primary-container": "#848484",
+                    "secondary": "#705d00",
+                    "on-tertiary-container": "#838485",
+                    "tertiary-fixed": "#e2e2e3",
+                    "tertiary": "#000000",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#544600",
+                    "on-surface": "#1a1b22",
+                    "surface-variant": "#e3e1ec",
+                    "secondary-container": "#fcd400",
+                    "inverse-surface": "#2f3038",
+                    "on-primary-fixed": "#1b1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "grid-pattern": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-image: radial-gradient(circle at 2px 2px, #f0f0f0 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-zinc-100 bg-white flex flex-col p-4 gap-2 z-50">
+<div class="mb-8 px-2">
+<h1 class="text-xl font-black text-zinc-900 tracking-tighter">Command Center</h1>
+<p class="text-zinc-500 font-label-sm uppercase tracking-widest text-[10px]">Suite Agence v1.0</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-500 hover:bg-zinc-50 transition-all duration-200 rounded-md font-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1">dashboard</span>
+                Tableau de bord
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-500 hover:bg-zinc-50 transition-all duration-200 rounded-md font-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="search" style="font-variation-settings: 'FILL' 1">search</span>
+                Prospection
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 bg-[#FFD700] text-black shadow-sm transition-all duration-200 rounded-md font-label-md font-bold" href="#"><span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1">group</span> Prospects</a>
+</nav>
+<div class="mt-auto flex flex-col gap-1 pt-4 border-t border-zinc-100">
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-500 hover:bg-zinc-50 transition-all duration-200 rounded-md font-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Paramètres
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-500 hover:bg-zinc-50 transition-all duration-200 rounded-md font-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+                Support
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar Shell -->
+<header class="sticky top-0 z-40 h-16 px-6 bg-white/80 backdrop-blur-md border-b border-zinc-100 flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+<div class="flex items-center gap-4">
+<span class="text-lg font-black tracking-tighter text-zinc-900">PROSPECT_FLOW</span>
+<div class="h-4 w-[1px] bg-zinc-200"></div>
+<h2 class="font-headline-md text-zinc-900">Résultats des Leads</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-200 text-zinc-600 hover:bg-zinc-50 transition-colors font-label-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="search">search</span>
+                        Nouvelle recherche
+                    </button>
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 text-white hover:bg-zinc-800 transition-colors font-label-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="bar_chart">bar_chart</span>
+                        Analyse des recherches
+                    </button>
+</div>
+<div class="flex items-center gap-3 ml-4">
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-zinc-900" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-zinc-900" data-icon="help_outline">help_outline</span>
+<div class="w-8 h-8 rounded-full bg-zinc-200 overflow-hidden border border-zinc-100">
+<img alt="Administrateur Agence" class="w-full h-full object-cover" data-alt="professional headshot of a business executive in a modern office environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5RqPJry61Lzset8gTn4t7usMwQ6gQ34vDkEc0gdxJFB-2IaVr-fJgJSd8MwV31lbbVQvAPKeyKnKgahsGGsDdEcsZ6NBwvCYWHcxfSWxs7kbeDpyU06wR_xfXx2k1OtPJydOSN5LJonVeJWDiGDV9PvCdx9LTicyIexfndFRRbtIhCHLw1UKqYBaDm1FAPDhXptZQm2E2znt71900weHDlvKEuUxdpc24w3IOsEbkZwKL1yM6W0KBK5JauOF-IpWuqLbg2z15WfPf"/>
+</div>
+</div>
+</div>
+</header>
+<section class="p-lg max-w-7xl mx-auto">
+<!-- Filter Bar -->
+<div class="bg-white p-4 rounded-xl border border-zinc-100 shadow-sm flex items-center gap-4 mb-lg">
+<div class="flex-1 grid grid-cols-2 gap-4">
+<div class="relative">
+<label class="absolute -top-2 left-3 px-1 bg-white font-label-sm text-zinc-500">Secteur</label>
+<select class="w-full border-zinc-200 rounded-lg focus:ring-0 focus:border-zinc-900 py-3 font-body-md">
+<option>Tous les secteurs</option>
+<option>Technologie</option>
+<option>Santé</option>
+<option>Finance</option>
+<option>E-commerce</option>
+</select>
+</div>
+<div class="relative">
+<label class="absolute -top-2 left-3 px-1 bg-white font-label-sm text-zinc-500">Pays/Ville</label>
+<div class="flex items-center border border-zinc-200 rounded-lg focus-within:border-zinc-900 transition-colors">
+<span class="material-symbols-outlined text-zinc-400 ml-3" data-icon="location_on">location_on</span>
+<input class="w-full border-none focus:ring-0 py-3 font-body-md placeholder:text-zinc-300" placeholder="Chercher un lieu..." type="text"/>
+</div>
+</div>
+</div>
+<button class="bg-zinc-100 text-zinc-900 px-6 py-3 rounded-lg font-bold hover:bg-zinc-200 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                    Appliquer les filtres
+                </button>
+</div>
+<!-- Nouveau Prospect Button Positioned below filters -->
+<div class="flex justify-end mb-md">
+<button class="bg-[#FFD700] text-black font-bold py-3 px-8 rounded-lg shadow-sm hover:opacity-90 active:scale-95 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+            Nouveau Prospect
+        </button>
+</div>
+<!-- Leads Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Lead Card 1 -->
+<div class="group bg-white border border-zinc-100 rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#FFD700] transform -translate-y-full group-hover:translate-y-0 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-zinc-50 rounded-lg border border-zinc-100 flex items-center justify-center text-zinc-900 font-bold text-xl">N</div>
+<button class="text-zinc-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-zinc-900 mb-1">NexGen Solutions</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-zinc-50 text-zinc-600 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider border border-zinc-100">Technologie</span>
+<div class="flex items-center gap-1 text-zinc-400 text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                                Lyon, France
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<a class="text-center font-label-md text-zinc-500 hover:text-zinc-900 underline underline-offset-4 decoration-zinc-200" href="#">Voir les détails</a>
+<button class="w-full bg-zinc-900 text-white font-bold py-3 rounded-lg hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                            Envoyer un mail
+                        </button>
+</div>
+</div>
+<!-- Lead Card 2 -->
+<div class="group bg-white border border-zinc-100 rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#FFD700] transform -translate-y-full group-hover:translate-y-0 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-zinc-50 rounded-lg border border-zinc-100 flex items-center justify-center text-zinc-900 font-bold text-xl">V</div>
+<button class="text-zinc-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-zinc-900 mb-1">VitalCare Health</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-zinc-50 text-zinc-600 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider border border-zinc-100">Santé</span>
+<div class="flex items-center gap-1 text-zinc-400 text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                                Paris, France
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<a class="text-center font-label-md text-zinc-500 hover:text-zinc-900 underline underline-offset-4 decoration-zinc-200" href="#">Voir les détails</a>
+<button class="w-full bg-zinc-900 text-white font-bold py-3 rounded-lg hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                            Envoyer un mail
+                        </button>
+</div>
+</div>
+<!-- Lead Card 3 -->
+<div class="group bg-white border border-zinc-100 rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#FFD700] transform -translate-y-full group-hover:translate-y-0 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-zinc-50 rounded-lg border border-zinc-100 flex items-center justify-center text-zinc-900 font-bold text-xl">A</div>
+<button class="text-zinc-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-zinc-900 mb-1">AeroSwift Logistics</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-zinc-50 text-zinc-600 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider border border-zinc-100">Logistique</span>
+<div class="flex items-center gap-1 text-zinc-400 text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                                Bruxelles, Belgique
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<a class="text-center font-label-md text-zinc-500 hover:text-zinc-900 underline underline-offset-4 decoration-zinc-200" href="#">Voir les détails</a>
+<button class="w-full bg-zinc-900 text-white font-bold py-3 rounded-lg hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                            Envoyer un mail
+                        </button>
+</div>
+</div>
+<!-- Lead Card 4 -->
+<div class="group bg-white border border-zinc-100 rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#FFD700] transform -translate-y-full group-hover:translate-y-0 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-zinc-50 rounded-lg border border-zinc-100 flex items-center justify-center text-zinc-900 font-bold text-xl">O</div>
+<button class="text-zinc-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-zinc-900 mb-1">Omni Retail</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-zinc-50 text-zinc-600 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider border border-zinc-100">E-commerce</span>
+<div class="flex items-center gap-1 text-zinc-400 text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                                Berlin, Allemagne
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<a class="text-center font-label-md text-zinc-500 hover:text-zinc-900 underline underline-offset-4 decoration-zinc-200" href="#">Voir les détails</a>
+<button class="w-full bg-zinc-900 text-white font-bold py-3 rounded-lg hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                            Envoyer un mail
+                        </button>
+</div>
+</div>
+<!-- Lead Card 5 -->
+<div class="group bg-white border border-zinc-100 rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#FFD700] transform -translate-y-full group-hover:translate-y-0 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-zinc-50 rounded-lg border border-zinc-100 flex items-center justify-center text-zinc-900 font-bold text-xl">F</div>
+<button class="text-zinc-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-zinc-900 mb-1">FinStream</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-zinc-50 text-zinc-600 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider border border-zinc-100">Finance</span>
+<div class="flex items-center gap-1 text-zinc-400 text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                                Zurich, Suisse
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<a class="text-center font-label-md text-zinc-500 hover:text-zinc-900 underline underline-offset-4 decoration-zinc-200" href="#">Voir les détails</a>
+<button class="w-full bg-zinc-900 text-white font-bold py-3 rounded-lg hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                            Envoyer un mail
+                        </button>
+</div>
+</div>
+<!-- Lead Card 6 -->
+<div class="group bg-white border border-zinc-100 rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#FFD700] transform -translate-y-full group-hover:translate-y-0 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-zinc-50 rounded-lg border border-zinc-100 flex items-center justify-center text-zinc-900 font-bold text-xl">S</div>
+<button class="text-zinc-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-zinc-900 mb-1">Solaris Energy</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-zinc-50 text-zinc-600 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider border border-zinc-100">Eco-Tech</span>
+<div class="flex items-center gap-1 text-zinc-400 text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                                Montpellier, France
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<a class="text-center font-label-md text-zinc-500 hover:text-zinc-900 underline underline-offset-4 decoration-zinc-200" href="#">Voir les détails</a>
+<button class="w-full bg-zinc-900 text-white font-bold py-3 rounded-lg hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                            Envoyer un mail
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
