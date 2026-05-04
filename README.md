@@ -2,6 +2,11 @@
 
 Prospect Flow est une plateforme SaaS de prospection intelligente conçue pour une agence E-commerce spécialisée dans la mode, le fooding, la beauté, la santé, l'énergie et les projets innovants. L'outil permet de centraliser la recherche de leads, l'automatisation de l'enrichissement des données et la prise de contact ciblée.
 
+## 🔗 Liens Utiles
+- **Démo en direct :** [https://automatisation-prospects.vercel.app](https://automatisation-prospects.vercel.app)
+- **Maquette UI / Design :** [Stitch Mockup](https://stitch.withgoogle.com/projects/16139420339979512322)
+
+
 ## 🌟 Fonctionnalités Principales
 
 *   **Tableau de Bord (Dashboard) :** Vue d'ensemble des performances de prospection, avec statistiques sur les leads ajoutés et filtres de temps (7 jours, 30 jours, personnalisés).
